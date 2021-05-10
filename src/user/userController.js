@@ -50,7 +50,10 @@ exports.login = async (req, res) => {
         }
         if (success) {
           token = jwt.sign(
-            { id: result[0].id, email: result[0].email },
+            {
+              id: result[0].id,
+              email: result[0].email,
+            },
             process.env.JWT_SECRET
           );
           return res.status(200).json({

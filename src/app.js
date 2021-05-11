@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 app.use("/users", require("./user/index"));
 app.use("/products", require("./product/routes"));
 app.use("/cart", require("./cart/routes"));
+app.use("/delivery", require("./delivery/routes"));
 
 // Error handler - when none of the endpoints match
 app.use((req, res, next) => {

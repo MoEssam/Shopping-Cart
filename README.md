@@ -9,12 +9,12 @@
 
 ### Use Cases
 
-1. User Can register and login
-2. User can see all products depending on his available balance
-3. User can request a product that isnot available yet
-4. User can add,remove and update his cart
-5. User can ship his order
-6. User can cancel his shippment and take a refund
+1. User Can register and login.
+2. User can see all products depending on his available balance.
+3. User can request a product that is not available yet.
+4. User can add,remove and update his cart.
+5. User can ship his order.
+6. User can cancel his shippment and take a refund.
 
 ## To run project locally
 
@@ -28,4 +28,5 @@
 ### Login Credentials:
 
 email: moe1@gmail.com or moe2@gmail.com or moe3@gmail.com
+
 password: admin1234

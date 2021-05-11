@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 var verifyToken = require("../middleware/verifyToken");
-var checkAuth = require("../middleware/auth");
 var jwt = require("jsonwebtoken");
 var db = require("../config/dbConnection");
 
@@ -53,6 +52,7 @@ router.post("/addtocart/:id", verifyToken, (req, res) => {
                               db.query(
                                 "INSERT INTO cart_product SET ? ",
                                 {
+                                  user_id: authData.id,
                                   cart_id: cartResult.insertId,
                                   product_id,
                                 },
@@ -130,6 +130,7 @@ router.post("/updatecart/:cart_id/:product_id", verifyToken, (req, res) => {
                           {
                             cart_id,
                             product_id,
+                            user_id: authData.id,
                           },
                           (error) => {
                             if (error) {

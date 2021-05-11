@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "4f6a295f-431e-493e-b6a1-fb1bebc03bd1",
+		"name": "Shopping Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"moe3@gmail.com\",\r\n\"password\":\"admin1234\",\r\n\"name\":\"Mohamed Essam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Protected Route",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJtb2UxQGdtYWlsLmNvbSIsImlhdCI6MTYyMDY0MzAxN30.znsr6YOxNeEvKTDilac6-0jyzsSnn6S70wafncA-4OM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/protected",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"protected"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJtb2UxQGdtYWlsLmNvbSIsImlhdCI6MTYyMDY0MzAxN30.znsr6YOxNeEvKTDilac6-0jyzsSnn6S70wafncA-4OM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"moe2@gmail.com\",\r\n    \"password\": \"admin1234\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjIwNjA0ODk4LCJleHAiOjE2MjE4MTQ0OTh9.XgAvDOVX-WDqJJcUG7LBgl5vqtHhdTjv760Ay0xnlRM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjIwNjA0NjQxLCJleHAiOjE2MjE4MTQyNDF9.dHhS2vMiPL9C7xQI3w3-pN6EAkHB29q1X3Enbj-UQ0c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtb2UzQGdtYWlsLmNvbSIsImJhbGFuY2UiOjE1MCwiaWF0IjoxNjIwNjU2ODA5fQ.n5CnoBpjQ6W63M1Qv1Ls_McCokUMSKsAuWPYdFqColo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjIwNjA0NjQxLCJleHAiOjE2MjE4MTQyNDF9.dHhS2vMiPL9C7xQI3w3-pN6EAkHB29q1X3Enbj-UQ0c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/products/all",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtb2UzQGdtYWlsLmNvbSIsImlhdCI6MTYyMDY0OTk0NX0.lpqBjpt3ffJz8plMarwFz6Q7DdMb-CUTLI7ah7cnxl4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Available Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtb2UzQGdtYWlsLmNvbSIsImJhbGFuY2UiOjE1MCwiaWF0IjoxNjIwNjU2ODA5fQ.n5CnoBpjQ6W63M1Qv1Ls_McCokUMSKsAuWPYdFqColo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtb2UyQGdtYWlsLmNvbSIsImlhdCI6MTYyMDczMzc5NX0.OoQJuvQ0pZLK8VZy7wvVBNHu1KwC1uL2rviJ7hhUM6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\":\"Shoes\",\r\n    \"name\":\"Air Max\",\r\n    \"brand\":\"Nike\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/products/request",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"request"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add to Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtb2UyQGdtYWlsLmNvbSIsImlhdCI6MTYyMDczMzc5NX0.OoQJuvQ0pZLK8VZy7wvVBNHu1KwC1uL2rviJ7hhUM6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cart/addtocart/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"addtocart",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove from cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtb2UyQGdtYWlsLmNvbSIsImlhdCI6MTYyMDczMzc5NX0.OoQJuvQ0pZLK8VZy7wvVBNHu1KwC1uL2rviJ7hhUM6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cart/removefromcart/:cart_product_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"removefromcart",
+								":cart_product_id"
+							],
+							"variable": [
+								{
+									"key": "cart_product_id",
+									"value": "147"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtb2UyQGdtYWlsLmNvbSIsImlhdCI6MTYyMDczMzc5NX0.OoQJuvQ0pZLK8VZy7wvVBNHu1KwC1uL2rviJ7hhUM6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cart/updatecart/:cart_id/:product_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"updatecart",
+								":cart_id",
+								":product_id"
+							],
+							"variable": [
+								{
+									"key": "cart_id",
+									"value": "38"
+								},
+								{
+									"key": "product_id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJtb2UzQGdtYWlsLmNvbSIsImJhbGFuY2UiOjE1MCwiaWF0IjoxNjIwNjU2ODA5fQ.n5CnoBpjQ6W63M1Qv1Ls_McCokUMSKsAuWPYdFqColo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cart/test",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "To Delivery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtb2UyQGdtYWlsLmNvbSIsImlhdCI6MTYyMDczMzc5NX0.OoQJuvQ0pZLK8VZy7wvVBNHu1KwC1uL2rviJ7hhUM6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/delivery/:cartid",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delivery",
+								":cartid"
+							],
+							"variable": [
+								{
+									"key": "cartid",
+									"value": "38"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Delivery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJtb2UyQGdtYWlsLmNvbSIsImlhdCI6MTYyMDczMzc5NX0.OoQJuvQ0pZLK8VZy7wvVBNHu1KwC1uL2rviJ7hhUM6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/delivery/cancelorder/:deliveryid",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delivery",
+								"cancelorder",
+								":deliveryid"
+							],
+							"variable": [
+								{
+									"key": "deliveryid",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -13,3 +13,10 @@ User can request a product that isnot available yet
 User can add,remove and update his cart
 User can ship his order
 User can cancel his shippment and take a refund
+
+## To run project locally
+
+1. Clone this project using git clone https://github.com/MoEssam/Shopping-Cart.git
+2. Rename dotenv to .env
+3. npm i to install all dependenices
+4. npm run dev to run project

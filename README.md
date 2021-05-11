@@ -20,3 +20,5 @@ User can cancel his shippment and take a refund
 2. Rename dotenv to .env
 3. npm i to install all dependenices
 4. npm run dev to run project
+5. to login localhost:3000/users/login
+6. to register localhost:3000/users/register

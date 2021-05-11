@@ -22,3 +22,8 @@ User can cancel his shippment and take a refund
 4. npm run dev to run project
 5. to login localhost:3000/users/login
 6. to register localhost:3000/users/register
+
+### Login Credentials:
+
+email: moe1@gmail.com or moe2@gmail.com or moe3@gmail.com
+password: admin1234

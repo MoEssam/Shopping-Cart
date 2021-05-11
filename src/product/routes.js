@@ -54,7 +54,7 @@ router.post("/request", verifyToken, (req, res) => {
       var { category, name, brand } = req.body;
       db.query(
         "INSERT INTO product_request SET ?",
-        { category, name, brand },
+        { category, name, brand, user_id: authData.id },
         (error, result) => {
           if (error) {
             console.log(error);

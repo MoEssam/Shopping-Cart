@@ -188,7 +188,7 @@ router.post("/removefromcart/:cart_product_id", verifyToken, (req, res) => {
                           productPrice[0].price + userBalance[0].balance;
                         db.query(
                           "DELETE from cart_product WHERE id = ? AND user_id = ?",
-                          [new_balance, authData.id],
+                          [cart_product_id, authData.id],
                           (error, deleteResult) => {
                             if (error) {
                               console.log(error);

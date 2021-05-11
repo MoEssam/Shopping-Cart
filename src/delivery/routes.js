@@ -90,13 +90,6 @@ router.post("/cancelorder/:deliveryid", verifyToken, (req, res) => {
                           cart_total_balance.push(totalBalance);
                           cart_product_id.push(joinResults[i].cart_product_id);
                         }
-                        var length = cart_total_balance.length;
-                        console.log(length);
-                        console.log(cart_total_balance[length - 1]);
-                        console.log(
-                          "balance is ",
-                          cart_total_balance[length - 1]
-                        );
                         db.query(
                           "DELETE FROM cart_product WHERE id in (?)",
                           [cart_product_id],
@@ -123,7 +116,10 @@ router.post("/cancelorder/:deliveryid", verifyToken, (req, res) => {
                                         if (error) {
                                           console.log(error);
                                         } else {
-                                          res.json(updateBalance);
+                                          res.json({
+                                            message:
+                                              "Your shippment has been cancelled and money credited to your balance",
+                                          });
                                         }
                                       }
                                     );

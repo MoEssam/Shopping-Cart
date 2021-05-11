@@ -7,12 +7,12 @@
 3. Cart
 4. Delivery
 
-User Can register and login
-User can see all products depending on his available balance
-User can request a product that isnot available yet
-User can add,remove and update his cart
-User can ship his order
-User can cancel his shippment and take a refund
+5. User Can register and login
+6. User can see all products depending on his available balance
+7. User can request a product that isnot available yet
+8. User can add,remove and update his cart
+9. User can ship his order
+10. User can cancel his shippment and take a refund
 
 ## To run project locally
 

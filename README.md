@@ -3,7 +3,7 @@
 ### Shopping cart with 4 components
 
 1. User
-2. Produce
+2. Product
 3. Cart
 4. Delivery
 

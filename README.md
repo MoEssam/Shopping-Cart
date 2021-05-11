@@ -27,6 +27,6 @@
 
 ### Login Credentials:
 
-email: moe1@gmail.com or moe2@gmail.com or moe3@gmail.com
+email: moe1@gmail.com or moe2@gmail.com or moe3@gmail.com <br />
 
 password: admin1234
